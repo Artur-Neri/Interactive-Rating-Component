@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- My styles -->
+
+  <link rel="stylesheet" href="/dist/styles.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  
+</head>
+<body>
+  <main class="card">
+    <div class="card__content" id="homePage">
+      <div class="card__icon card__item--bg">
+        <img src="./images/icon-star.svg" alt="" class="">
+      </div>
+        
+
+      <h1 class="card__title">How did we do?</h1>
+
+      <p class="card__description">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+      </p>
+
+      <div class="card__ratings">
+        <button type="button" class="card__rating card__item--bg" id="btn1" value="1" onclick="myRating(this.value)">1</button>
+        <button class="card__rating card__item--bg" class="btn2" value="2" onclick="myRating(this.value)">2</button>
+        <button class="card__rating card__item--bg" class="btn3" value="3" onclick="myRating(this.value)">3</button>
+        <button class="card__rating card__item--bg" class="btn4" value="4" onclick="myRating(this.value)">4</button>
+        <button class="card__rating card__item--bg" class="btn5" value="5" onclick="myRating(this.value)">5</button>
+      </div>
+
+      <input type="submit" value="SUBMIT" class="card__btn" onclick="sendRating()"></input>
+
+    </div>
+
+    <div class="card__content card__ty" id="ty-page">
+      <div class="card__icon">
+        <img src="/images/illustration-thank-you.svg" alt="" class="card__ty__img">
+      </div>
+
+      <p class="card__ty__rating">You selected <span id="result"></span> out of 5</p>
+
+      <h1 class="card__title">Thank you!</h1>
+
+      <p class="card__description">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+  </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.instagram.com/art_nerii/">Artur Neri</a>.
+  </footer>
+  <script src="/app/script.js"></script>
+</body>
+</html>
